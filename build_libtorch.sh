@@ -18,18 +18,18 @@ retry () {
 }
 
 install_deps() {
-  sudo apt install -y build-essential cmake ninja-build python3 python3-pip zip
-  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 100
-  sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 100
+  apt install -y build-essential cmake ninja-build python3 python3-pip zip
+  update-alternatives --install /usr/bin/python python /usr/bin/python3 100
+  update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 100
 }
 
 
 install_blas() {
-  sudo apt install -y libopenblas-dev
+  apt install -y libopenblas-dev
 }
 
 install_ccache() {
-  sudo apt install -y ccache
+  apt install -y ccache
   export PATH="/usr/lib/ccache:$PATH"
 }
 
